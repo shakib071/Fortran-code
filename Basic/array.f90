@@ -66,6 +66,7 @@ program dynamic_2d_array_example
     end do
 
     ! Print the 2D array
+    ! print*, matrix(1,3)
     print *, 'Matrix elements:'
     do i = 1, rows
         print *, matrix(i, :)
