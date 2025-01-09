@@ -1,4 +1,4 @@
-program newton_backword
+program newton_diff_backword
 
     integer :: n,rows,cols,i,j,k
     real :: xx,u,ans,term
@@ -11,8 +11,9 @@ program newton_backword
     rows=n 
     cols=n
     allocate(table(rows,cols))
-    
+
     print *, "Enter the values x and f(x)"
+
     do i=1,n 
         read*,x(i),table(1,i)
     end do 
@@ -24,46 +25,36 @@ program newton_backword
     print *,"What is the interpolation Point : "
     read *,xx 
 
-    u=(xx-x(n))/(x(2)-x(1))
-
-    print*,u 
-
-    do i=2,n 
+    k=0
+   
+    do i=2,n
         do j=1,n-i+1
-            table(i,j)=table(i-1,j+1) - table(i-1,j)
+            table(i,j) = (table(i-1,j+1) - table(i-1,j))/(x(j+1+k)-x(j))
+          
         end do
+      
+          k=k+1
     end do 
-
+    
     ! print the table 
     print*, "The table is : "
-    do i=1, rows
+    do i=1, n 
         print*, table(i,:)
     end do 
 
+    term =1
     ans = 0
-    term = 1.0
     k=n
     do i=1,n 
-        ans= ans + ((term * (table(i,k)))/real(factorial(i-1)))
-        term = term * (u+i-1)
+        ans = ans + term*table(i,k)
+        term = term * (xx+x(i))
         k=k-1
-    end do 
+    end do
 
+    print*, "The newtons Divided forword difference interpolation at x= ",xx, " is ",ans
     
-    print*, "Newtons forward backword interpolation at x=",xx," is : ",ans
-   
-contains 
-    integer function factorial(n) result(ans)
-        integer :: n
-        if(n==0) then 
-            ans = 1
-        else 
-            ans = 1
-            do i=1,n 
-                ans=ans*i 
-            end do 
-        end if 
-    end function factorial
 
 
-end program newton_backword
+
+
+end program newton_diff_backword

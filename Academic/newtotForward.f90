@@ -12,6 +12,8 @@ program newton_forword
     cols=n
     allocate(table(rows,cols))
 
+    print *, "Enter the values x and f(x)"
+
     do i=1,n 
         read*,x(i),table(1,i)
     end do 
@@ -44,7 +46,7 @@ program newton_forword
     term =1
 
     do i=1,n 
-        ans= ans + ((term * (table(rows,1)))/real(factorial(i-1)))
+        ans= ans + ((term * (table(i,1)))/real(factorial(i-1)))
         term = term * (u-i+1)
     end do 
 
