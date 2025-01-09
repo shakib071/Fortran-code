@@ -1,6 +1,6 @@
 program fixed_point 
 
-    real :: x0,tol,x
+    real :: x0,tol,x1
     integer :: iter,i 
     i=1 
 
