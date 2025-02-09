@@ -45,7 +45,7 @@ program multi_step_variable_stepsize
     contains 
         real  function f(x,y) result(ans)
             real :: x,y 
-            ans = y + sin(x)
+            ans = exp(-1*x) - y 
         end function f 
 
 
