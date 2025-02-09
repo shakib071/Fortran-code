@@ -5,7 +5,7 @@ program euler_method_adaptive_step_size
     real ,dimension(:), allocatable ::y 
     integer :: iter,i
 
-    print*,"Enter the value of initian value x0,y0 and step size"
+    print*,"Enter the value of initian value x0,y0 and initial step size"
     read*,x0,y0,h 
 
     print*,"Enter the tolerence"

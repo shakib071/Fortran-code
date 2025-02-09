@@ -7,7 +7,7 @@ program multi_step_variable_stepsize
     integer :: iter ,i 
     real ,dimension(:),allocatable :: y
 
-    print*,"Enter initial guess x0,y0 and step size h"
+    print*,"Enter initial guess x0,y0 and initial step size h"
     read*,x0,y0,h
 
     print*,"Enter the tolerence "
