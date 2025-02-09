@@ -25,11 +25,13 @@ program multi_step
     y(1) = y0
     y(2) = y(1) + h*f(x(1),y(1))
 
+    !calculation
     do i=3,iter+1
         y(i) = y(i-1) + (h/2)*(3*f(x(i-1),y(i-1)) - f(x(i-1),y(i-2)))
        
     end do 
 
+    print*, "The Multistep Adam bashforth 2 step method solutions are :"
     do i=1,iter+1
         print*,"At iteration = ",i-1," y = ",y(i)
     end do 

@@ -23,7 +23,9 @@ program Range_Kutta_2
         y(i)=y(i-1) + 0.5*(k1+k2)
         x0=x0+h
     end do 
-
+    
+    !print the answers
+    print*,"Runge kutta second order solutions are : "
     do i=1,iter+1
         print*,"At iteration = ",i-1," y = ",y(i)
     end do 

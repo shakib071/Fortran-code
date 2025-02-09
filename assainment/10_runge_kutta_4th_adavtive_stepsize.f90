@@ -20,6 +20,7 @@ program Range_Kutta_4_adaptive_step_size
 
     y(1)=y0
 
+    !calculations 
     do i=2,iter+1
         k1 = h*f(x0,y(i-1));
         k2 = h*f(X0+(h/2.0),y(i-1)+(k1/2.0))
@@ -39,6 +40,7 @@ program Range_Kutta_4_adaptive_step_size
         x0=x0+h
     end do 
 
+    print*,"The runge kutta 4th order adaptive step size solutions are :"
     do i=1,iter+1
         print*,"At iteration = ",i-1," y = ",y(i)
     end do 

@@ -3,7 +3,7 @@ program  picard
     implicit none
     real:: x0,y0,x
     integer :: iter,i 
-     real, dimension(:), allocatable :: y
+    real, dimension(:), allocatable :: y
 
     print*,"Enter the initial value x0 and y0"
     read*,x0,y0
@@ -15,13 +15,16 @@ program  picard
     read*,x 
 
     allocate(y(iter))
+
+    !calculate picard method
     y(1)=y0
     do i=2,iter
         y(i)=y(1)+integrate(x0,x,y(i-1))
     end do
 
+    !print the value
     do i=1,iter
-        print*,"y",i," is ",y(i);
+        print*," At iterations=",i," Picard solution is=",y(i);
     end do
 
     contains

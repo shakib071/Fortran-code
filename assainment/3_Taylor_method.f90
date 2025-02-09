@@ -17,12 +17,15 @@ program Taylor_Method
     y(1)=y0
 
   
+    !calculation for taylor method 
 
     do i=2,iter+1
         y(i) = y(i-1) + ((h*df(x0,y(i-1)))/factorial(1)) + ((h*d2f(x0,y(i-1)))/factorial(2)) + ((h*d3f(x0,y(i-1)))/factorial(3))
         x0 = x0+h 
     end do 
 
+    !print the iterations
+    print*,"The Taylor method solutions are :"
     do i=1,iter+1 
         print*," At iteration = ",i-1," y = ",y(i)
     end do 

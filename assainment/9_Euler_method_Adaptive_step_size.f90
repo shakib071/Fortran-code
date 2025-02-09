@@ -32,6 +32,7 @@ program euler_method_adaptive_step_size
 
     end do
 
+    print*,"The Euler method Adaptive step size solutios are :"
     do  i=1,iter+1
         print*,"At iteration = ",i-1," y = ",y(i)
     end do 
