@@ -1,0 +1,4 @@
+I=78
+PRINT*,I
+STOP
+END

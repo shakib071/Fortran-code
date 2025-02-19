@@ -1,0 +1,7 @@
+I=568
+L=776
+K=464
+PRINT*,I,L,K
+STOP
+END
+

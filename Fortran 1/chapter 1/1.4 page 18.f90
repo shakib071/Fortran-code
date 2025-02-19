@@ -1,0 +1,6 @@
+I=6
+L=4
+K=32
+PRINT*,I,L,K
+STOP
+END
