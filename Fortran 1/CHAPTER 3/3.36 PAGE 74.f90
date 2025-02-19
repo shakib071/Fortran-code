@@ -1,0 +1,7 @@
+READ*,T
+X=T**3-8*T+4
+Y=SIN(X)+COS(2*T)
+Z=EXP(3*T+5)
+PRINT*,T,X,Y,Z
+STOP
+END
