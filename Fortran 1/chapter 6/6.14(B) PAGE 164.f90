@@ -1,0 +1,11 @@
+DIMENSION Y(21)
+READ*,N
+X=-N
+KK=2*N+1
+DO 100 K=1,KK
+    Y(K)=2.0*X**4-5.0*X**3+6.0*X**2-8.0*X+9.0
+    PRINT*,'FOR X=',X,'Y IS',Y(K)
+    X=X+1
+100 CONTINUE
+STOP
+END
