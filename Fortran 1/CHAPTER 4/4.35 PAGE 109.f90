@@ -1,0 +1,13 @@
+READ*,N
+I=1
+J=1
+PRINT*,I
+PRINT*,J
+100 K=I+J
+PRINT*,K
+I=J
+J=K
+IF((I+J).LT.N) GO TO 100
+STOP
+END
+

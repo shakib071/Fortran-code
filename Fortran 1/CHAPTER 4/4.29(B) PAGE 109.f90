@@ -1,0 +1,12 @@
+READ*,N
+SUM=0.0
+A=1.0
+B=1
+100 SUM=SUM+(1/A)*B
+B=(-B)
+A=A+1
+IF(A.LE.N) GO TO 100
+PRINT*,SUM
+STOP
+END
+

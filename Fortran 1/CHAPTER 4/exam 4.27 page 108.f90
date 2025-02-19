@@ -1,0 +1,11 @@
+READ*,N
+I=1
+J=2
+K=3
+100 PRINT*,I,J,K
+I=K+1
+J=K+2
+K=K+3
+IF(K.LE.N) GO TO 100
+STOP
+END
