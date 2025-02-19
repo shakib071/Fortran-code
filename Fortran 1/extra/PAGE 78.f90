@@ -1,0 +1,6 @@
+I=1;
+99 PRINT*,I
+I=I+1;
+GO TO 99
+STOP
+END

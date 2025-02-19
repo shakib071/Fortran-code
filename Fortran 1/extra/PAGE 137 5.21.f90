@@ -1,0 +1,11 @@
+READ*,N
+READ*,K
+J=N
+DO 100 I=1,J
+    PRINT*,N
+    N=N-1
+    IF(N.LT.K) GO TO 200
+100 CONTINUE
+200 STOP
+END
+
