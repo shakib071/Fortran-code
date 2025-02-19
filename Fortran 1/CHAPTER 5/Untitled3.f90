@@ -1,0 +1,12 @@
+N=20
+DO 100 I=1,20
+    J=21-I
+    DO 200 K=1,J
+        PRINT*,N
+200 CONTINUE
+N=N-1
+100 CONTINUE
+STOP
+END
+
+

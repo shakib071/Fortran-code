@@ -1,0 +1,8 @@
+X=-4.0
+DO 100 I=1,17
+    Y=2*X*X-3*X-5
+    PRINT*,'VALUE OF X:',X,'   AND Y IS:',Y
+    X=X+0.5
+100 CONTINUE
+STOP
+END

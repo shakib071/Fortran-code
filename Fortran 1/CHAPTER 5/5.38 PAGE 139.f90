@@ -1,0 +1,19 @@
+X=-3
+LAR=0.0
+DO 100 I=1,31
+    Y=-3
+    DO 200 J=1,31
+
+    Z=X**2-2.0*X*Y+3.0*Y**2-8.0*X+3.0*Y-8.0
+    IF(Z.GE.LAR) LAR=Z
+      WRITE(6,11),X,Y,Z
+      11 FORMAT('FOR X=',F5.2,2X,' AND Y=',F10.2,2X,'Z =',F10.2)
+    Y=Y+0.2
+200 CONTINUE
+    X=X+0.2
+100 CONTINUE
+PRINT*,'THE LARGEST Z IS ',LAR
+
+STOP
+END
+

@@ -1,0 +1,11 @@
+!(A)
+X=-5
+DO 100 K=1,101
+    Y=X**2-4*X+6
+      WRITE(6,11),X,Y
+      11 FORMAT('FOR X=',F5.2,2X,'Y=',F10.2)
+    X=X+0.1
+100 CONTINUE
+
+STOP
+END

@@ -1,0 +1,15 @@
+INTEGER X,Y
+K=0
+DO 100 I=1,15
+    X=8-I
+    !YEILDS -7 TO 7
+    DO 200 J=1,15
+        Y=8-J
+        IF(X**2+Y**2.GE.50) GO TO 200
+        K=K+1
+        200 CONTINUE
+    100 CONTINUE
+PRINT*,'THE NUMBERS OF INTEGER CO-ORDINATES IS',K
+STOP
+END
+

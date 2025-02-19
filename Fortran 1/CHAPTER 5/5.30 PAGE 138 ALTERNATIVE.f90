@@ -1,0 +1,15 @@
+INTEGER A,B,C
+I=0
+DO 100 A=1,24
+    DO 200 B=1,24
+        DO 300 C=1,24
+            IF((A**2+B**2.EQ.C**2).OR.(A**2+C**2.EQ.B**2).OR.(B**2+C**2.EQ.A**2)) GO TO 40
+            IF((A**2+B**2.NE.C**2).OR.(A**2+C**2.NE.B**2).OR.(B**2+C**2.NE.A**2)) GO TO 300
+       40 PRINT*,A,B,C,'IS A PYTHAGOREAN TRIPLET'
+       I=I+1
+ 300 CONTINUE
+ 200 CONTINUE
+ 100 CONTINUE
+ PRINT*,'THERE ARE ',I,'NUMBER OF TRIPLET'
+ STOP
+ END
